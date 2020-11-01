@@ -1,0 +1,21 @@
+{
+  "name": "parceltest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "smooth-scrollbar": "^8.5.3",
+    "styles": "^0.2.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.27.0"
+  },
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "prod": "parcel build src/*.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap'); 
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: 0;
+}
+
+html {	
+	--bg: #ffffff;
+	--bg-red: #E94949;
+	--bg-green: #18CB68;
+	--bg-green: #499CE9;
+	--color-text: #212529;
+	--nav-text: #ffffff;
+	--nav-bg: #212529;
+	--toggle-bg: #212529;
+	--footer-bg: #F1F5F5;
+	--link-color: #212529;
+	--testimonial-bg: #F1F5F5;
+}
+
+html[data-theme='dark'] {	
+	--bg: #212529;
+	--bg-red: #212529;
+	--hero-bg-green: #212529;
+	--hero-bg-green: #212529;
+	--color-text: #dadada;
+	--nav-text: #212529;
+	--nav-bg: #dadada;
+	--toggle-bg: #E94949;
+	--footer-bg: #212529;
+	--testimonial-bg: #212529;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--bg);
+	color: var(--color-text);
+}
+
+.text-underline {
+	text-decoration: underline;
+}
+
+a {
+	color: var var(--link-color);
+}
+
+a:hover {
+	color: #E94949;
+	text-decoration: none;
+	transition: .2s ease-in-out;
+}
+
+p, a, ul{
+	font-size: 1.25rem;
+	margin: 0;
+}
+
+::-moz-selection { /* Code for Firefox */
+	color: #ffffff;
+	background: #E94949;
+}
+
+ul {
+	padding-left: 1rem;
+}
+
+::selection {
+	color: #ffffff;
+	background: #E94949;
+}
+
+h1, h2, h3, h4 {
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 2.7rem;
+	line-height: 1.2;
+}
+h2 {
+	font-size: 2rem;
+	line-height: 1.2;
+}
+
+h3 {
+	font-size: 1.5rem;
+	line-height: 1.1;
+}
+
+.medium {
+	font-size: .8rem;
+}
+/* Intro  */
+.intro {
+	z-index: 2;
+}
+
+.portrait {
+	padding: .5rem;
+}
+
+/* nav */
+
+.nav {
+	padding-left: 15px;
+}
+
+.nav a {
+	font-weight: 700;
+	font-size: 4.4rem;
+	line-height: 1.1;
+}
+
+.nav-link {
+	color: #212529;
+	display: inline-block;
+	padding: 0 .5rem;
+	margin-bottom: .6rem;
+	color: var(--color-text);
+}
+
+.nav-link:hover {
+	color: var(--nav-text);
+	background-color:var(--nav-bg);
+	transition: .3s ease-in-out;
+}
+
+.active {
+	color: var(--nav-text);
+	background-color:var(--nav-bg);
+}
+
+/* headings */
+.text-red {
+	color: #E94949;
+}
+
+.text-green {
+	color: #18CB68;
+}
+
+.text-blue {
+	color: #499CE9;
+}
+
+.lead {
+	font-size: 1.4rem;
+}
+
+/* clients */
+.client-logo {
+    width: 250px;
+}
+
+
+/* // Extra small devices (portrait phones, less than 576px) */
+/* // No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 375px) {	
+}
+
+@media (min-width: 414px) {
+	.medium {
+		font-size: .8rem;
+	}
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.medium {
+		font-size: .8rem;
+	}
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	.medium {
+		font-size: .9rem;
+	}
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+	h1 {
+		font-size: 3.5rem;
+	}
+	.medium {
+		font-size: 1rem;
+	}
+}
