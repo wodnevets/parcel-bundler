@@ -1,6 +1,3 @@
-import './scripts/scroll-to-top';
-import './scripts/toggle'
+import './scripts/scroll-to-top'
 import './scripts/dark-mode'
-import Scrollbar from 'smooth-scrollbar';
-
-Scrollbar.init(document.querySelector('#my-scrollbar'), options);
+import './scripts/page-load-animation'

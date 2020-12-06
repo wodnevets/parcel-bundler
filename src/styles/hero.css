@@ -1,27 +1,33 @@
 /* Hero */
-.bg-red {
+.home {
 	background-color: var(--bg-red);
+	background-image: url(../img/hero/hero-bg-img-who.svg);
+}
+
+.about {
+	background-color: var(--bg-green);
+	background-image: url(../img/hero/hero-bg-img-what.svg);
+}
+
+.work {
+	background-color: var(--bg-blue);
+}
+
+.logo {
+	fill: var(--logo);
 }
 
 .view-height {
 	height: 100vh;
 }
 
-.hero-bg-img-who, .hero-bg-img-what, .hero-bg-img-work {
+.home, .about, .work {
 	background-size: 23rem;
 	background-position: right -20px bottom -10px;
 	background-repeat: no-repeat;
 }
 
-.hero-bg-img-who {
-	background-image: url(../img/hero/hero-bg-img-who.svg);
-}
-
-.hero-bg-img-what {
-	background-image: url(../img/hero/hero-bg-img-what.svg);
-}
-
-.hero-bg-img-work {
+.work {
 	background-image: url(../img/hero/hero-bg-img-work.svg);
 }
 
@@ -32,18 +38,6 @@
 	-o-background-size: cover;
 	background-size: cover;
 	background-repeat: no-repeat;
-}
-
-.background-red {
-	background-color: #E94949;
-}
-
-.background-green {
-	background-color: #18CB68;
-}
-
-.background-blue {
-	background-color: #499CE9;
 }
 
 .img-border {
@@ -79,7 +73,7 @@
 	.view-height {
 		height: auto;
 	}
-	.hero-bg-img-work, .hero-bg-img-what, .hero-bg-img-who {
+	.home, .about, .work {
 		background-size: 30rem;
 		background-position: right -20px bottom -10px;
 	}
@@ -104,15 +98,15 @@
 	.view-height {
 		height: 100vh;
 	}
-	.hero-bg-img-work {
+	.work {
 		background-size: 55rem;
 		background-position: right -44px bottom -18px;
 	}
-	.hero-bg-img-what {
+	.about {
 		background-size: 55rem;
 		background-position: right -48px bottom -18px;
 	}
-	.hero-bg-img-who {
+	.home {
 		background-size: 50rem;
 		background-position: right -50px bottom -20px;
 	}
