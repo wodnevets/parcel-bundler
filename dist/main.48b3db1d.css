@@ -1,41 +1,121 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: 0;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-html {
-  --bg: #ffffff;
-  --bg-red: #E94949;
+:root {
+  --clr-light: #ffffff;
+  --clr-dark: #212529;
+  --foreground: var(--clr-dark);
+  --background: var(--clr-light);
+  --logo: #212529;
   --bg-green: #18CB68;
-  --bg-green: #499CE9;
-  --color-text: #212529;
+  --bg-blue: #499CE9;
+  --bg-grey: #f8f9fa;
+  --bg-red: #E94949;
+  --ff-body: "Roboto", sans-serif;
+  --footer-bg: #F1F5F5;
   --nav-text: #ffffff;
   --nav-bg: #212529;
-  --toggle-bg: #212529;
-  --footer-bg: #F1F5F5;
-  --link-color: #212529;
+  --link-color: var(--clr-dark);
   --testimonial-bg: #F1F5F5;
+  --icon: #ECDD00;
+  --img: 1;
 }
 
-html[data-theme=dark] {
-  --bg: #212529;
-  --bg-red: #212529;
-  --hero-bg-green: #212529;
-  --hero-bg-green: #212529;
-  --color-text: #dadada;
-  --nav-text: #212529;
-  --nav-bg: #dadada;
-  --toggle-bg: #E94949;
-  --footer-bg: #212529;
-  --testimonial-bg: #212529;
+.darkmode {
+  --clr-light: #dadada;
+  --clr-dark: #212529;
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
+  --logo: var(--clr-light);
+  --bg-green: var(--clr-dark);
+  --bg-blue: var(--clr-dark);
+  --bg-grey: var(--clr-dark);
+  --bg-red: var(--clr-dark);
+  --footer-bg: var(--clr-dark);
+  --nav-bg: var(--clr-light);
+  --nav-text:var(--clr-dark);
+  --link-color: var(--clr-light);
+  --icon: #424242;
+  --img: 0.8;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: var(--bg);
-  color: var(--color-text);
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--ff-body);
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1.7em;
+  right: 1em;
+  color: var(--foreground);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+}
+
+.fade-in {
+  animation: fadeIn ease-in-out 1s;
+  -webkit-animation: fadeIn ease-in-out 1s;
+  -moz-animation: fadeIn ease-in-out 1s;
+  -o-animation: fadeIn ease-in-out 1s;
+  -ms-animation: fadeIn ease-in-out 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+img {
+  opacity: var(--img);
+}
+
+.icon {
+  fill: var(--icon);
 }
 
 .text-underline {
@@ -43,7 +123,7 @@ body {
 }
 
 a {
-  color: var var(--link-color);
+  color: var(--link-color);
 }
 
 a:hover {
@@ -156,6 +236,10 @@ h3 {
   width: 250px;
 }
 
+.bg-grey {
+  background-color: var(--bg-grey);
+}
+
 /* // Extra small devices (portrait phones, less than 576px) */
 /* // No media query for `xs` since this is the default in Bootstrap */
 /* // Small devices (landscape phones, 576px and up) */
@@ -197,13 +281,14 @@ h3 {
   outline: none;
   background-color: transparent;
   color: var(--color-text);
+  opacity: 0.7;
   cursor: pointer;
   padding: 0;
   border-radius: 0;
 }
 
 .back-to-top:hover {
-  color: var(--toggle-bg);
+  opacity: 0.9;
   transition: 0.2s ease-in-out;
 }
 
@@ -216,51 +301,45 @@ h3 {
 }
 
 /* Hero */
-.bg-red {
+.home {
   background-color: var(--bg-red);
+  background-image: url(hero-bg-img-who.d2508edf.svg);
+}
+
+.about {
+  background-color: var(--bg-green);
+  background-image: url(hero-bg-img-what.dd5ffab1.svg);
+}
+
+.work {
+  background-color: var(--bg-blue);
+}
+
+.logo {
+  fill: var(--logo);
 }
 
 .view-height {
   height: 100vh;
 }
 
-.hero-bg-img-who, .hero-bg-img-what, .hero-bg-img-work {
+.home, .about, .work {
   background-size: 23rem;
   background-position: right -20px bottom -10px;
   background-repeat: no-repeat;
 }
 
-.hero-bg-img-who {
-  background-image: url(/hero-bg-img-who.d2508edf.svg);
-}
-
-.hero-bg-img-what {
-  background-image: url(/hero-bg-img-what.dd5ffab1.svg);
-}
-
-.hero-bg-img-work {
-  background-image: url(/hero-bg-img-work.4b15c010.svg);
+.work {
+  background-image: url(hero-bg-img-work.4b15c010.svg);
 }
 
 .hero-bg-img-case-study-1 {
-  background-image: url(/case-study-1-hero-bg-img.2f1765a3.jpg);
+  background-image: url(case-study-1-hero-bg-img.2f1765a3.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.background-red {
-  background-color: #E94949;
-}
-
-.background-green {
-  background-color: #18CB68;
-}
-
-.background-blue {
-  background-color: #499CE9;
 }
 
 .img-border {
@@ -281,7 +360,7 @@ h3 {
 }
 @media (min-width: 414px) {
   .hero-bg-img-case-study-1 {
-    background-image: url(/case-study-1-hero-bg-img-568.336f4730.jpg);
+    background-image: url(case-study-1-hero-bg-img-568.336f4730.jpg);
     background-position: center bottom;
   }
 
@@ -295,13 +374,13 @@ h3 {
     height: auto;
   }
 
-  .hero-bg-img-work, .hero-bg-img-what, .hero-bg-img-who {
+  .home, .about, .work {
     background-size: 30rem;
     background-position: right -20px bottom -10px;
   }
 
   .hero-bg-img-case-study-1 {
-    background-image: url(/case-study-1-hero-bg-img-md.1d5c8390.jpg);
+    background-image: url(case-study-1-hero-bg-img-md.1d5c8390.jpg);
     background-position: center bottom;
   }
 
@@ -312,7 +391,7 @@ h3 {
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .hero-bg-img-case-study-1 {
-    background-image: url(/case-study-1-hero-bg-img-lg.7e25c773.jpg);
+    background-image: url(case-study-1-hero-bg-img-lg.7e25c773.jpg);
   }
 }
 /* // Extra large devices (large desktops, 1200px and up) */
@@ -321,23 +400,23 @@ h3 {
     height: 100vh;
   }
 
-  .hero-bg-img-work {
+  .work {
     background-size: 55rem;
     background-position: right -44px bottom -18px;
   }
 
-  .hero-bg-img-what {
+  .about {
     background-size: 55rem;
     background-position: right -48px bottom -18px;
   }
 
-  .hero-bg-img-who {
+  .home {
     background-size: 50rem;
     background-position: right -50px bottom -20px;
   }
 
   .hero-bg-img-case-study-1 {
-    background-image: url(/case-study-1-hero-bg-img-xl.e7820ac3.jpg);
+    background-image: url(case-study-1-hero-bg-img-xl.e7820ac3.jpg);
   }
 
   .hero-header {
@@ -346,6 +425,7 @@ h3 {
 }
 /* blockquote */
 .blockquote-footer {
+  color: #212529;
   font-size: 1rem;
   line-height: 1.5;
 }

@@ -1,42 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap'); 
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: 0;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }
 
-html {	
-	--bg: #ffffff;
-	--bg-red: #E94949;
+:root {
+	--clr-light: #ffffff;
+	--clr-dark: #212529;
+	--foreground: var(--clr-dark);
+	--background: var(--clr-light);
+	--logo: #212529;
 	--bg-green: #18CB68;
-	--bg-green: #499CE9;
-	--color-text: #212529;
+	--bg-blue: #499CE9;
+	--bg-grey: #f8f9fa;
+	--bg-red: #E94949;
+	--ff-body: 'Roboto', sans-serif;
+	--footer-bg: #F1F5F5;
 	--nav-text: #ffffff;
 	--nav-bg: #212529;
-	--toggle-bg: #212529;
-	--footer-bg: #F1F5F5;
-	--link-color: #212529;
+	--link-color: var(--clr-dark);
 	--testimonial-bg: #F1F5F5;
+	--icon: #ECDD00;
+	--img: 1;
 }
-
-html[data-theme='dark'] {	
-	--bg: #212529;
-	--bg-red: #212529;
-	--hero-bg-green: #212529;
-	--hero-bg-green: #212529;
-	--color-text: #dadada;
-	--nav-text: #212529;
-	--nav-bg: #dadada;
-	--toggle-bg: #E94949;
-	--footer-bg: #212529;
-	--testimonial-bg: #212529;
-}
-
+  
+.darkmode {
+	--clr-light: #dadada;
+	--clr-dark: #212529;
+	--foreground: var(--clr-light);
+	--background: var(--clr-dark);
+	--logo: var(--clr-light);
+	--bg-green: var(--clr-dark);
+	--bg-blue: var(--clr-dark);
+	--bg-grey: var(--clr-dark);
+	--bg-red: var(--clr-dark);
+	--footer-bg: var(--clr-dark);
+	--nav-bg: var(--clr-light);
+	--nav-text:var(--clr-dark);
+	--link-color: var(--clr-light);
+	--icon: #424242;
+	--img: 0.8;}
+  
 body {
-	font-family: 'Roboto', sans-serif;
-	background-color: var(--bg);
-	color: var(--color-text);
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--ff-body);
+}
+
+.dark-mode-toggle {
+	position: absolute;
+	z-index: 100;
+	top: 1.7em;
+	right: 1em;
+	color: var(--foreground);
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	width: 28px;
+	height: 28px;
+}
+
+.fade-in {
+animation: fadeIn ease-in-out 1s;
+-webkit-animation: fadeIn ease-in-out 1s;
+-moz-animation: fadeIn ease-in-out 1s;
+-o-animation: fadeIn ease-in-out 1s;
+-ms-animation: fadeIn ease-in-out 1s;
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+img {
+	opacity: var(--img);
+}
+
+.icon {
+	fill: var(--icon);
 }
 
 .text-underline {
@@ -44,7 +107,7 @@ body {
 }
 
 a {
-	color: var var(--link-color);
+	color: var(--link-color);
 }
 
 a:hover {
@@ -103,7 +166,6 @@ h3 {
 }
 
 /* nav */
-
 .nav {
 	padding-left: 15px;
 }
@@ -130,7 +192,7 @@ h3 {
 
 .active {
 	color: var(--nav-text);
-	background-color:var(--nav-bg);
+	background-color: var(--nav-bg);
 }
 
 /* headings */
@@ -155,6 +217,9 @@ h3 {
     width: 250px;
 }
 
+.bg-grey {
+	background-color: var(--bg-grey);
+}
 
 /* // Extra small devices (portrait phones, less than 576px) */
 /* // No media query for `xs` since this is the default in Bootstrap */
