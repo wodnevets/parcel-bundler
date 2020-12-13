@@ -24,7 +24,6 @@
 	--testimonial-bg: #F1F5F5;
 	--icon: #ECDD00;
 	--img: 1;
-
 }
   
 .darkmode {
@@ -42,15 +41,12 @@
 	--nav-text:var(--clr-dark);
 	--link-color: var(--clr-light);
 	--icon: #424242;
-	transition: .2s ease-in-out;
-	--img: 0.8;
-}
+	--img: 0.8;}
   
 body {
 	background: var(--background);
 	color: var(--foreground);
 	font-family: var(--ff-body);
-	transition: .2s ease-in-out;
 }
 
 .dark-mode-toggle {
@@ -64,7 +60,39 @@ body {
 	cursor: pointer;
 	width: 28px;
 	height: 28px;
-  }
+}
+
+.fade-in {
+animation: fadeIn ease-in-out 1s;
+-webkit-animation: fadeIn ease-in-out 1s;
+-moz-animation: fadeIn ease-in-out 1s;
+-o-animation: fadeIn ease-in-out 1s;
+-ms-animation: fadeIn ease-in-out 1s;
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
 
 img {
 	opacity: var(--img);
