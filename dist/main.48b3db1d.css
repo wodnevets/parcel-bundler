@@ -303,12 +303,12 @@ h3 {
 /* Hero */
 .home {
   background-color: var(--bg-red);
-  background-image: url(hero-bg-img-who.d2508edf.svg);
+  background-image: url(/hero-bg-img-who.d2508edf.svg);
 }
 
 .about {
   background-color: var(--bg-green);
-  background-image: url(hero-bg-img-what.dd5ffab1.svg);
+  background-image: url(/hero-bg-img-what.dd5ffab1.svg);
 }
 
 .work {
@@ -330,11 +330,11 @@ h3 {
 }
 
 .work {
-  background-image: url(hero-bg-img-work.4b15c010.svg);
+  background-image: url(/hero-bg-img-work.4b15c010.svg);
 }
 
 .hero-bg-img-case-study-1 {
-  background-image: url(case-study-1-hero-bg-img.2f1765a3.jpg);
+  background-image: url(/case-study-1-hero-bg-img.2f1765a3.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -360,7 +360,7 @@ h3 {
 }
 @media (min-width: 414px) {
   .hero-bg-img-case-study-1 {
-    background-image: url(case-study-1-hero-bg-img-568.336f4730.jpg);
+    background-image: url(/case-study-1-hero-bg-img-568.336f4730.jpg);
     background-position: center bottom;
   }
 
@@ -380,7 +380,7 @@ h3 {
   }
 
   .hero-bg-img-case-study-1 {
-    background-image: url(case-study-1-hero-bg-img-md.1d5c8390.jpg);
+    background-image: url(/case-study-1-hero-bg-img-md.1d5c8390.jpg);
     background-position: center bottom;
   }
 
@@ -391,7 +391,7 @@ h3 {
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .hero-bg-img-case-study-1 {
-    background-image: url(case-study-1-hero-bg-img-lg.7e25c773.jpg);
+    background-image: url(/case-study-1-hero-bg-img-lg.7e25c773.jpg);
   }
 }
 /* // Extra large devices (large desktops, 1200px and up) */
@@ -416,7 +416,7 @@ h3 {
   }
 
   .hero-bg-img-case-study-1 {
-    background-image: url(case-study-1-hero-bg-img-xl.e7820ac3.jpg);
+    background-image: url(/case-study-1-hero-bg-img-xl.e7820ac3.jpg);
   }
 
   .hero-header {
