@@ -1,23 +1,26 @@
 {
-  "name": "parceltest",
+  "name": "wodnevets-dark-mode",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "dependencies": {
     "gsap": "^3.5.1",
-    "styles": "^0.2.1"
+    "sass": "^1.30.0"
   },
-  "devDependencies": {
-    "bundler": "^0.8.0",
-    "parcel": "^1.12.4",
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.27.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "dev": "parcel src/*.html",
-    "prod": "parcel build src/*.html"
+    "build": "parcel build src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wodnevets/wodnevets-dark-mode.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "bugs": {
+    "url": "https://github.com/wodnevets/wodnevets-dark-mode/issues"
+  },
+  "homepage": "https://github.com/wodnevets/wodnevets-dark-mode#readme"
 }
